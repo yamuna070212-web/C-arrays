@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr1[5], arr2[5], i;
+
+    printf("Enter 5 Elements:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &arr1[i]);
+        arr2[i] = arr1[i];
+    }
+
+    printf("Copied Array:\n");
+
+    for(i = 0; i < 5; i++)
+        printf("%d ", arr2[i]);
+
+    return 0;
+}
+Sample Output
+Enter 5 Elements:
+10 20 30 40 50
+Copied Array:
+10 20 30 40 50
