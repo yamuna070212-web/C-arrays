@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[5], i;
+    int smallest, second;
+
+    printf("Enter 5 Elements:\n");
+
+    for(i = 0; i < 5; i++)
+        scanf("%d", &arr[i]);
+
+    if(arr[0] < arr[1])
+    {
+        smallest = arr[0];
+        second = arr[1];
+    }
+    else
+    {
+        smallest = arr[1];
+        second = arr[0];
+    }
+
+    for(i = 2; i < 5; i++)
+    {
+        if(arr[i] < smallest)
+        {
+            second = smallest;
+            smallest = arr[i];
+        }
+        else if(arr[i] < second && arr[i] != smallest)
+        {
+            second = arr[i];
+        }
+    }
+
+    printf("Second Smallest = %d", second);
+
+    return 0;
+}
+Sample Output
+Enter 5 Elements:
+10 45 30 70 60
+
+Second Smallest = 30
