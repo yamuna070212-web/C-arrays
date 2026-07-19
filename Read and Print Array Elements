@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[5], i;
+
+    printf("Enter 5 Elements:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Array Elements are:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+Sample Output
+Enter 5 Elements:
+10 20 30 40 50
+Array Elements are:
+10 20 30 40 50
