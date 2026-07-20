@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3], i, j, max;
+
+    printf("Enter 3x3 Matrix:\n");
+
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    max = a[0][0];
+
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            if(a[i][j] > max)
+                max = a[i][j];
+        }
+    }
+
+    printf("Largest Element = %d", max);
+
+    return 0;
+}
+Sample Output
+Enter 3x3 Matrix:
+2 5 8
+1 9 4
+7 3 6
+
+Largest Element = 9
