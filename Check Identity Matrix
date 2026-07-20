@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3], i, j, identity = 1;
+
+    printf("Enter 3x3 Matrix:\n");
+
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            if((i == j && a[i][j] != 1) ||
+               (i != j && a[i][j] != 0))
+            {
+                identity = 0;
+            }
+        }
+    }
+
+    if(identity)
+        printf("Identity Matrix");
+    else
+        printf("Not an Identity Matrix");
+
+    return 0;
+}
+Sample Output
+Enter 3x3 Matrix:
+1 0 0
+0 1 0
+0 0 1
+
+Identity Matrix
