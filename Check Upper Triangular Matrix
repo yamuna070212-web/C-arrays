@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3], i, j, upper = 1;
+
+    printf("Enter 3x3 Matrix:\n");
+
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    for(i = 1; i < 3; i++)
+    {
+        for(j = 0; j < i; j++)
+        {
+            if(a[i][j] != 0)
+                upper = 0;
+        }
+    }
+
+    if(upper)
+        printf("Upper Triangular Matrix");
+    else
+        printf("Not an Upper Triangular Matrix");
+
+    return 0;
+}
+Sample Output
+Enter 3x3 Matrix:
+1 2 3
+0 4 5
+0 0 6
+
+Upper Triangular Matrix
