@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3], i, j;
+
+    printf("Enter 3x3 Matrix:\n");
+
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("Boundary Elements:\n");
+
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            if(i == 0 || i == 2 || j == 0 || j == 2)
+                printf("%d ", a[i][j]);
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+Sample Output
+Enter 3x3 Matrix:
+1 2 3
+4 5 6
+7 8 9
+
+Boundary Elements:
+1 2 3
+4   6
+7 8 9
